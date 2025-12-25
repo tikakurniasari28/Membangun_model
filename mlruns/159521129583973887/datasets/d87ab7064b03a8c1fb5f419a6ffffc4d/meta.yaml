@@ -1,0 +1,12 @@
+digest: '05226374'
+name: dataset
+profile: '{"num_rows": 150, "num_elements": 1500}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "Deaths"}, {"type": "double",
+  "name": "Recovered"}, {"type": "double", "name": "Active"}, {"type": "double", "name":
+  "New cases"}, {"type": "double", "name": "New deaths"}, {"type": "double", "name":
+  "New recovered"}, {"type": "double", "name": "Deaths / 100 Cases"}, {"type": "double",
+  "name": "Recovered / 100 Cases"}, {"type": "double", "name": "Deaths / 100 Recovered"},
+  {"type": "double", "name": "No. of countries"}]}'
+source: '{"tags": {"mlflow.user": "tika", "mlflow.source.name": ".\\modelling.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "55e2f1f013cf31681cb2e07166959d262ad14e4f"}}'
+source_type: code

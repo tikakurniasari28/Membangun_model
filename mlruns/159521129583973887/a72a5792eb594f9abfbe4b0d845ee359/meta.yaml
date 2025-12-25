@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/159521129583973887/a72a5792eb594f9abfbe4b0d845ee359/artifacts
+end_time: 1766631890945
+entry_point_name: ''
+experiment_id: '159521129583973887'
+lifecycle_stage: active
+run_id: a72a5792eb594f9abfbe4b0d845ee359
+run_name: selective-cub-552
+run_uuid: a72a5792eb594f9abfbe4b0d845ee359
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766631877391
+status: 3
+tags: []
+user_id: tika

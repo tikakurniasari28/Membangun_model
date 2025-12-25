@@ -1,0 +1,3 @@
+https://dagshub.com/<tikakurniasari28>/<Eksperimen_SML_Ni-Luh-Made-Tika-Kurniasari>
+
+https://dagshub.com/api/v1/repo-buckets/s3/tikakurniasari28

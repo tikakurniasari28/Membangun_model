@@ -6,29 +6,38 @@ import mlflow
 import mlflow.sklearn
 from pathlib import Path
 
-mlflow.sklearn.autolog()
-
 BASE_DIR = Path(__file__).resolve().parent
 data_path = BASE_DIR / "day_wise_processed.csv"
 
-df = pd.read_csv(data_path)
+def main():
+    # Tracking lokal
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment("Basic-Autolog")
 
-X = df.iloc[:, :-1]
-y = df.iloc[:, -1]
+    df = pd.read_csv(data_path)
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
+ 
+    y = df["Confirmed"]
+    X = df.drop(columns=["Confirmed"])
 
-with mlflow.start_run():
-    model = LinearRegression()
-    model.fit(X_train, y_train)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
 
-    y_pred = model.predict(X_test)
-    y_pred = model.predict(X_test)
+    mlflow.sklearn.autolog()
 
-mse = mean_squared_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
+    with mlflow.start_run():
+        model = LinearRegression()
+        model.fit(X_train, y_train)
 
-print("MSE:", mse)
-print("R2:", r2)
+        y_pred = model.predict(X_test)
+
+        mse = mean_squared_error(y_test, y_pred)
+        r2 = r2_score(y_test, y_pred)
+
+        print("Training selesai")
+        print("MSE:", mse)
+        print("R2:", r2)
+
+if __name__ == "__main__":
+    main()

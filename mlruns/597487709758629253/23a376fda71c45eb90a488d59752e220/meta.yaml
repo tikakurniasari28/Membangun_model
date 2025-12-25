@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/kurni/Downloads/Membangun_model/Membangun_model-1/mlruns/597487709758629253/23a376fda71c45eb90a488d59752e220/artifacts
+end_time: 1766632329667
+entry_point_name: ''
+experiment_id: '597487709758629253'
+lifecycle_stage: active
+run_id: 23a376fda71c45eb90a488d59752e220
+run_name: dapper-colt-516
+run_uuid: 23a376fda71c45eb90a488d59752e220
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766632323490
+status: 3
+tags: []
+user_id: tika
