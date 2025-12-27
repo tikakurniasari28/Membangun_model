@@ -8,12 +8,13 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from mlflow.models.signature import infer_signature
 import mlflow
 import mlflow.sklearn
 
 mlflow.set_experiment("Skilled-Tuning-ManualLogging")
 
-data = pd.read_csv("day_wise_processed.csv")
+data = pd.read_csv("Membangun_model\day_wise_processed.csv")
 
 y = data["Confirmed"]
 X = data.drop(columns=["Confirmed"])
@@ -55,8 +56,14 @@ for n_estimators in n_estimators_list:
             mlflow.log_metric("mae", mae)
             mlflow.log_metric("r2", r2)
 
-            # Log model artifact
-            mlflow.sklearn.log_model(model, "model")
+            signature = infer_signature(X_train, model.predict(X_train))
+
+            mlflow.sklearn.log_model(
+                model,
+                artifact_path="model",
+                signature=signature,
+                input_example=X_train.head(5)
+            )
 
             print(
                 f"Run selesai | n_estimators={n_estimators}, "

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/kurni/Downloads/Membangun_model/mlruns/988453674482722994/db8aca277fb94b1f9ca5691078747c55/artifacts
+end_time: 1766848820755
+entry_point_name: ''
+experiment_id: '988453674482722994'
+lifecycle_stage: active
+run_id: db8aca277fb94b1f9ca5691078747c55
+run_name: aged-dog-552
+run_uuid: db8aca277fb94b1f9ca5691078747c55
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766848813738
+status: 3
+tags: []
+user_id: tika
