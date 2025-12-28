@@ -1,0 +1,33 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+mlflow_version: 2.9.2
+model_size_bytes: 1995
+model_uuid: 9327880ba4d241c4af522317f4fa8226
+run_id: 588ee99ac97d4832a4e089fcb19a40d1
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Deaths"}, {"type": "double", "name": "Recovered"},
+    {"type": "double", "name": "Active"}, {"type": "double", "name": "New cases"},
+    {"type": "double", "name": "New deaths"}, {"type": "double", "name": "New recovered"},
+    {"type": "double", "name": "Deaths / 100 Cases"}, {"type": "double", "name": "Recovered
+    / 100 Cases"}, {"type": "double", "name": "Deaths / 100 Recovered"}, {"type":
+    "double", "name": "No. of countries"}]'
+  outputs: '[{"type": "double"}]'
+  params: null
+utc_time_created: '2025-12-28 14:13:46.041186'

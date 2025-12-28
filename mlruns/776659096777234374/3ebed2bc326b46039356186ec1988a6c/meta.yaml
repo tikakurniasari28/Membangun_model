@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/kurni/Downloads/Membangun_model/mlruns/776659096777234374/3ebed2bc326b46039356186ec1988a6c/artifacts
+end_time: 1766931243363
+entry_point_name: ''
+experiment_id: '776659096777234374'
+lifecycle_stage: active
+run_id: 3ebed2bc326b46039356186ec1988a6c
+run_name: lr_fit_False_pos_False
+run_uuid: 3ebed2bc326b46039356186ec1988a6c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766931237375
+status: 3
+tags: []
+user_id: tika
